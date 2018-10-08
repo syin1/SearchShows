@@ -25,4 +25,14 @@ module.exports = function(app) {
   app.get('/shows-page', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/shows-page.html'));
   });
+
+  // watchlist page
+  app.get('/watchlist', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/watchlist.html'));
+  });
+
+  // favorites page
+  app.get('/favorites', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/favorites.html'));
+  });
 };
