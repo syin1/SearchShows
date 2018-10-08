@@ -11,17 +11,18 @@ var path = require('path');
 module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads view.html
+  // landing page
   app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
 
-  app.get('/cms', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/cms.html'));
+  // movie details page
+  app.get('/movie-page', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/movie-page.html'));
   });
 
-  // blog route loads blog.html
-  app.get('/blog', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/blog.html'));
+  // tv-show details page
+  app.get('/shows-page', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/shows-page.html'));
   });
 };
