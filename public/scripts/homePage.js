@@ -6,42 +6,6 @@ let today = new Date().toJSON().slice(0, 10);
 // Setting the maximum(end) date. This is not dynamic. Looking for solution.
 let endDate = new Date(2019, 4, 17 + 1).toJSON().slice(0, 10);
 
-// Array for random quotes.
-let randomQuote = new Array();
-randomQuote[0] = " 'I'm going on an adventure!' - Bilbo Baggins, The Hobbit";
-randomQuote[1] =
-  " 'I'm going to make him an offer he can't refuse.' - Vito Corleone, The Godfather";
-randomQuote[2] = " 'You talkin' to me?' - Travis Bickle, Taxi Driver";
-randomQuote[3] = " 'Bond. James Bond.' - James Bond";
-randomQuote[4] = " 'I'll be back.' - Terminator, The Terminator";
-randomQuote[5] =
-  " 'My mama always said, 'Life is (was) like a box of chocolates. You never know what you're gonna get.' - Forrest Gump, Forrest Gump";
-randomQuote[6] = " 'I see dead people.' - Cole Sear, The Sixth Sense";
-randomQuote[7] =
-  " 'Keep your friends close, but your enemies closer.' - Michael Corleone, The Godfather part II";
-randomQuote[8] = " 'Say 'hello' to my little friend!' -Tony Montana, Scarface";
-randomQuote[9] =
-  " 'Hasta la vista, baby.' - The Terminator, Terminator 2: Judgement Day";
-randomQuote[10] = " 'Bye Felicia !' - Ice Cube, Friday";
-randomQuote[11] =
-  " 'My precious.' - Gollum, The Lord of the rings: The Two Towers";
-randomQuote[12] = " 'Houston, we have a problem.' - Jim Lovell, Apollo 13";
-randomQuote[13] = " 'Yippie-Ki-Yay, Motherfucker!' - John McClane, Die Hard";
-randomQuote[14] = " 'May the Force be with you' - Obi-Wan Kenobi, Star Wars";
-randomQuote[15] =
-  " 'A wizard is never late, Frodo Baggins. Nor is he early. He arrives precisely when he means to.' - Gandalf, The Lord of the Rings: Fellowship of the";
-let quote = document.getElementById('quote');
-
-// Change quote(with fade in/out animation) at the set interval.
-setInterval(() => {
-  quote.classList.remove('quoteFade');
-  setTimeout(() => {
-    document.getElementById('quote').innerHTML =
-      randomQuote[Math.round(Math.random() * 16)];
-    quote.classList.add('quoteFade');
-  }, 2500);
-}, 5000);
-
 window.onload = function featuredMovies() {
   // Random page number generator for popular movies and tv shows.
   let minPopular = 1;
@@ -169,11 +133,6 @@ window.onload = function featuredMovies() {
       const nowPlayingOutput = document.getElementById('nowPlaying');
       nowPlayingOutput.innerHTML = output;
     });
-  //Random quote on page load.
-  document.getElementById('quote').innerHTML =
-    randomQuote[Math.round(Math.random() * 16)];
-  quote.style.display = 'block';
-  quote.classList.remove('quoteFade');
 };
 // Popular movies slider
 const slider = document.querySelectorAll('.scroll');
